@@ -18,7 +18,7 @@ if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
   set(SOURCE_FOLDER app)                    # Defining source folder for project to generate executable
   add_subdirectory(${SOURCE_FOLDER})        # Adding and declaring specification for executable code
 
-# Location for building library folders
+# Location for building library folsders
 
   message("-- ${PROJECT_NAME} [${PROJECT_VERSION}] build files has been defined")
 else()
