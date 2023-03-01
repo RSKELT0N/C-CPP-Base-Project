@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="gtest"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\external\;CMake Files\external\googletest\;CMake Files\external\googletest\googlemock\;CMake Files\external\googletest\googlemock\cmake\;CMake Files\external\googletest\googletest\;CMake Files\external\googletest\googletest\cmake\;CMake Files\external\fmtlib\;CMake Files\external\fmtlib\support\;CMake Files\external\fmtlib\support\cmake\;CMake Files\src\;CMake Files\tests\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest">
+				<Option output="/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest/include"/>
+					<Add directory="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest/fast">
+				<Option output="/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest/include"/>
+					<Add directory="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main">
+				<Option output="/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest/include"/>
+					<Add directory="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_main/fast">
+				<Option output="/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest/include"/>
+					<Add directory="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake/external/googletest/googletest/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest/src/gtest-all.cc">
+			<Option target="gtest"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest/src/gtest_main.cc">
+			<Option target="gtest_main"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\googletest\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googlemock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\googletest\googlemock\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googlemock/cmake/gmock.pc.in">
+			<Option virtualFolder="CMake Files\external\googletest\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googlemock/cmake/gmock_main.pc.in">
+			<Option virtualFolder="CMake Files\external\googletest\googlemock\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\googletest\googletest\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest/cmake/Config.cmake.in">
+			<Option virtualFolder="CMake Files\external\googletest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest/cmake/gtest.pc.in">
+			<Option virtualFolder="CMake Files\external\googletest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest/cmake/gtest_main.pc.in">
+			<Option virtualFolder="CMake Files\external\googletest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/googletest/googletest/cmake/internal_utils.cmake">
+			<Option virtualFolder="CMake Files\external\googletest\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/fmtlib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\fmtlib\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/fmtlib/support/cmake/JoinPaths.cmake">
+			<Option virtualFolder="CMake Files\external\fmtlib\support\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/fmtlib/support/cmake/fmt-config.cmake.in">
+			<Option virtualFolder="CMake Files\external\fmtlib\support\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/external/fmtlib/support/cmake/fmt.pc.in">
+			<Option virtualFolder="CMake Files\external\fmtlib\support\cmake\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/Users/ryanskelton/C-CPP-Base-Project/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tests\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
