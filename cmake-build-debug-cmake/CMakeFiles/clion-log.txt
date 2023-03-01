@@ -1,9 +1,0 @@
-/usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/ryanskelton/C-CPP-Base-Project
--- C++ standard is set to -std=c++17
--- Module support is disabled.
--- Version: 9.1.1
--- Build type: Debug
--- C-CPP-BASE-PROJECT [0.1] build files has been defined
--- Configuring done
--- Generating done
--- Build files have been written to: /Users/ryanskelton/C-CPP-Base-Project/cmake-build-debug-cmake
