@@ -15,11 +15,5 @@ target_link_libraries(
         ${SUBMODULE_TESTS}
         PRIVATE gtest)
 
-target_include_directories(
-        ${SUBMODULE_TESTS}
-        PRIVATE ../external/googletest/googletest/include
-        PRIVATE ../external/googletest/googlemock/include
-)
-
 include(GoogleTest)
 gtest_discover_tests(${SUBMODULE_TESTS})

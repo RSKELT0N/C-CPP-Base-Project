@@ -15,9 +15,3 @@ add_executable(${EXECUTABLE_NAME} ${SOURCES})
 target_link_libraries(
         ${EXECUTABLE_NAME}
         PRIVATE fmt)
-
-target_include_directories(
-        ${EXECUTABLE_NAME}
-        PRIVATE ./include/
-        PRIVATE ../external/fmtlib/include/
-)
