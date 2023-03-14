@@ -1,5 +1,5 @@
 # CMake version specified
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.17)
 
 # Project declaration of base project.
 project(
@@ -10,7 +10,7 @@ project(
 
 # Only perform if this is the root project
 if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR) 
-  set(SOURCE_FOLDER src)
+  set(SOURCE_FOLDER core)
   set(TESTS_FOLDER tests)
   set(EXECUTABLE_NAME c-cpp-base-project)   # Define executable name for project
 
