@@ -1,37 +1,69 @@
 # CMake version specified
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.9)
+
+#Project Definitions
+#---------------------
+set(PROJECT proj)				    # Project Name (this name must match the source folder name)
+set(DESC "")						# Project Description
+set(CMAKE_CXX_STANDARD 23)			# CPP Standard
+set(EXECUTABLE_NAME ${PROJECT})	    # Executable name
 
 # Project declaration of base project.
-project(
-        C-CPP-BASE-PROJECT
+project(${PROJECT}
         VERSION 0.1
-        DESCRIPTION "Default description for base project."
+        DESCRIPTION ${DESC}
         LANGUAGES C CXX)
 
+cmake_policy(SET CMP0079 NEW)
+# find_package(OpenMP)				# To find/enable OpenMP (must be installed within your build tools) 
+
 # Only perform if this is the root project
-if(CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR) 
-  set(SOURCE_FOLDER core)
-  set(TESTS_FOLDER tests)
-  set(EXECUTABLE_NAME c-cpp-base-project)   # Define executable name for project
+if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
 
-#  set(CMAKE_CXX_EXTENSIONS off)             # Ensures -std=c++xx is provided, rather than -std=g++xx
-  set(CMAKE_CXX_STANDARD 17)                # Define the C++ standard
-  message("-- C++ standard is set to -std=c++${CMAKE_CXX_STANDARD}")
+    add_link_options(-rdynamic)
 
-  # submodules
-  add_subdirectory(external/googletest)
-  add_subdirectory(external/fmtlib)
+    message("-- C++ standard is set to -std=c++${CMAKE_CXX_STANDARD}")
 
-  # source
-  add_subdirectory(${SOURCE_FOLDER})
+    set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-  option(PACKAGE_TESTS "Build the tests" ON)
-  if(PACKAGE_TESTS)
-    enable_testing()
-    add_subdirectory(${TESTS_FOLDER})
-  endif()
+    # add submodules
+	add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT}/external/fmt)
 
-  message("-- ${PROJECT_NAME} [${PROJECT_VERSION}] build files has been defined")
-else()
-  message("-- ${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt must be the root config and not added as a subdirectory")
-endif()
+    # source
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT}/core)
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT}/core/log/logsystem)
+
+    if (CMAKE_TESTING_ENABLED)
+        enable_testing()
+	    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT}/external/googletest)
+        add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/${PROJECT}/tests)
+        message("-- ${PROJECT_NAME} [${PROJECT_VERSION}] test files have been defined")
+    endif ()
+
+    message("-- ${PROJECT_NAME} [${PROJECT_VERSION}] build files have been defined")
+
+    if (CMAKE_BUILD_TYPE MATCHES "Debug")
+        find_package(Doxygen)
+        if (DOXYGEN_FOUND)
+            # set input and output files
+            set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/docs/Doxyfile.in)
+            set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
+
+            # request to configure the file
+            configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
+            message("Doxygen build started")
+
+            # note the option ALL which allows to build the docs together with the application
+            add_custom_target(doc_doxygen ALL
+                    COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
+                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+                    COMMENT "Generating API documentation with Doxygen"
+                    VERBATIM)
+        else (DOXYGEN_FOUND)
+            message("Doxygen need to be installed to generate the doxygen documentation")
+        endif (DOXYGEN_FOUND)
+    endif ()
+
+else ()
+    message("-- ${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt must be the root config and not added as a subdirectory")
+endif ()

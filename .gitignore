@@ -1,6 +1,6 @@
-# Ignored files and folders
 build/
 .idea/
-cmake-build-debug-cmake/
 cmake-build-debug/
-*.o
+.vscode/
+lib/
+.DS_Store
